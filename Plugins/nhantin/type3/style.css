@@ -1,0 +1,12 @@
+#nhantin{position:relative;padding:2em;background-color:var(--color);border-radius:5px}
+#nhantin label{color:white;font-size:1.28em}
+#nhantin .form-control{padding:1.75em .75em}
+#nhantin .btn-danger{padding:1em .75em}
+@media (min-width:992px){
+	#nhantin{top:-3.5em}
+	footer{margin-top:2em}
+}
+@media screen and (max-width:992px){
+	footer{padding-top:2em}
+	#nhantin,#nhantin label,#nhantin .form-control{margin-bottom:1em}
+}

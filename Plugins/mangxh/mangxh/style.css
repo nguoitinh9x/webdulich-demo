@@ -1,0 +1,9 @@
+header .mangxh{display:inline-block}
+header .mangxh span{display:none}
+header .mangxh a{display:inline-block;margin:0 .5em 0 0}
+footer .mangxh{display:block;margin-top:1em}
+footer .mangxh span{display:inline-block;color:white;margin-right:.5em}
+footer .mangxh a{display:inline-block;margin:0 .5em 0 0}
+#mangxh_fixed{width:40px;position:fixed;left:0;top:40%;z-index:99;background-color:#f0f0f0}
+#mangxh_fixed img{opacity:.8}
+#mangxh_fixed img:hover{opacity:1}

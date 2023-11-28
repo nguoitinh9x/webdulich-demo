@@ -1,0 +1,1 @@
+$(".simplyscroll_post").simplyScroll({orientation:'vertical',customClass:'vert1'});

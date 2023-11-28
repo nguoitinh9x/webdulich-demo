@@ -1,0 +1,24 @@
+#mainmenu .menusite{background:var(--color);color:white;}
+.menusite .boxheadmenu{position:relative;background:rgba(0,0,0,.1);}
+.menusite .lbl{position:relative;padding:1em 1em;}
+.menusite .lbl span{margin-left:1em;text-transform:uppercase;}
+.menusite .lbl svg,.menusite .lbl i{}
+.menusite .menu2 li{padding:1em 0;}
+.menusite .menu2 li a{color:white;}
+.menusite .listmenu{position:absolute;top:100%;left:0;width:100%;height:auto;background:white;z-index:99;border-left:1px solid #ababab;border-right:1px solid #ababab;}
+.menusite .listmenu li{position:relative;border-bottom:1px solid #ababab;}
+.menusite .listmenu li a{font-weight:600;color:#333;text-transform:uppercase;padding:1em 1em;display:block;}
+.menusite .listmenu >li >a:hover{background:var(--color);color:white;}
+.menusite .listmenu >li >a{position:relative;}
+.menusite .listmenu >li >a:after{content:'';font-family:"Font Awesome 5";font-weight:700;position:absolute;right:1em;}
+.menusite .listmenu >li >ul{display:none;position:absolute;width:250px;top:0;background:white;left:100%;z-index:99;}
+.menusite .listmenu >li:hover >ul{display:block;transition:all .5s;}
+.menusite .listmenu >li >ul >li{border-left:1px solid #ababab;border-bottom:1px solid #ababab;}
+.menusite .listmenu >li >ul >li >a{color:var(--color);text-transform:capitalize;padding:1em 1em;}
+.menusite .listmenu >li >ul >li >a:hover{background:var(--color);color:white;}
+header.pagein #mainmenu .menusite .listmenu{display:none;}
+header.pagein #mainmenu .boxheadmenu{cursor:pointer;}
+
+
+#mainmenu .cart{position:relative;font-size:1.2em;padding:0 0 0 20px;}
+#mainmenu .cart span{position:absolute;background-color:#0787f7;color:white;border-radius:50%;line-height:normal;padding:4px 7px 2px 7px;top:-10px;right:-20px;font-size:11px;}

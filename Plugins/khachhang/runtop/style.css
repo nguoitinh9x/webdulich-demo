@@ -1,0 +1,10 @@
+#khachhang{padding:20px 0;}
+.customer{position:relative;display:flex;align-items:center;transition:all 0.3s;margin-bottom:10px;}
+.customer .img{flex:1 20%;}
+.customer .img img{border-radius:50%;-webkit-transition:-webkit-transform .8s ease-in-out;transition:transform .8s ease-in-out;}
+.customer .img img:hover{-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+.customer .details{flex:1 80%;padding:20px;}
+.customer .details h3{font-size:17px;color:#7a4301;text-transform:uppercase;}
+.customer .details h3 a{font-family:var(--font);font-size:17px;color:#7a4301;text-transform:uppercase;font-weight:bold;}
+.customer .details h3 a:hover{color:#e9d155;}
+.customer .details p{font-size:14px;color:#000000;}

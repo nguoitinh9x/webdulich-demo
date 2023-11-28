@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<!--
+/*
+ * Photobox
+ *
+ * Copyright 2012, Yair Even Or
+ * https://dropthebit.com
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+-->
+<html lang="en">
+<head>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="photobox/photobox.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src='photobox/jquery.photobox.js'></script>
+	<script type="text/javascript">
+	$(document).ready(function($) {
+		!(function(){
+				// finally, initialize photobox on all retrieved images
+				$('#gallery').photobox('a', { thumbs:true, loop:false });
+				// using setTimeout to make sure all images were in the DOM, before the history.load() function is looking them up to match the url hash
+		})();
+	});
+		
+	</script>
+</head>
+<body>
+	<div id='wrap'>
+
+		<ul id="gallery">
+		<li class="loaded"><a href="http://farm2.static.flickr.com/1513/25094242299_207878c9e0_b.jpg"><img src="http://farm2.static.flickr.com/1513/25094242299_207878c9e0_t.jpg" title="La orilla al atardecer"></a></li>
+		<li class="loaded"><a href="http://farm2.static.flickr.com/1664/24839009934_b407d30749_b.jpg"><img src="http://farm2.static.flickr.com/1664/24839009934_b407d30749_t.jpg" title="Niagara Falls Sunset"></a></li>
+		<li class="loaded"><a href="http://farm2.static.flickr.com/1691/25174561910_98d66643dc_b.jpg"><img src="http://farm2.static.flickr.com/1691/25174561910_98d66643dc_t.jpg" title="Still motion"></a></li>
+		<li class="loaded"><a href="http://farm2.static.flickr.com/1625/25349060712_5707be655f_b.jpg"><img src="http://farm2.static.flickr.com/1625/25349060712_5707be655f_t.jpg" title="Go Green!"></a></li><li class="loaded"><a href="http://farm2.static.flickr.com/1453/24824505044_d781791eb0_b.jpg"><img src="http://farm2.static.flickr.com/1453/24824505044_d781791eb0_t.jpg" title="Little Red Barn"></a></li><li class="video loaded"><a href="https://www.youtube.com/embed/LVn8ei8d4iU" rel="video"><img src="http://img.youtube.com/vi/LVn8ei8d4iU/0.jpg" title="PEOPLE ARE AWESOME 2014"></a></li><li class="loaded"><a href="http://farm2.static.flickr.com/1587/25349577882_07b7dcdc56_b.jpg"><img src="http://farm2.static.flickr.com/1587/25349577882_07b7dcdc56_t.jpg" title="While others slept . . ."></a></li><li class="video loaded"><a href="http://player.vimeo.com/video/8974462?byline=0&amp;portrait=0" rel="video"><img src="http://b.vimeocdn.com/ts/432/699/43269900_100.jpg" title="Victoria's Secret"></a></li><li class="video loaded"><a href="http://player.vimeo.com/video/62092214?byline=0&amp;portrait=0" rel="video"><img src="http://b.vimeocdn.com/ts/431/797/431797120_100.jpg" title="Biting Elbows - 'Bad Motherfucker' Official Music Video"></a></li><li class="loaded"><a href="http://farm2.static.flickr.com/1664/25449235406_a0efdd4342_b.jpg"><img src="http://farm2.static.flickr.com/1664/25449235406_a0efdd4342_t.jpg" title="the world outside"></a></li><li class="loaded"><a href="http://farm2.static.flickr.com/1622/25361617672_76fdcd3ba8_b.jpg"><img src="http://farm2.static.flickr.com/1622/25361617672_76fdcd3ba8_t.jpg" title="silent night"></a></li><li class="loaded"><a href="http://farm2.static.flickr.com/1662/24847908103_ee75b830d3_b.jpg"><img src="http://farm2.static.flickr.com/1662/24847908103_ee75b830d3_t.jpg" title="paper boat"></a></li><li class="loaded"><a href="http://farm2.static.flickr.com/1609/25159247890_07ac5160a9_b.jpg"><img src="http://farm2.static.flickr.com/1609/25159247890_07ac5160a9_t.jpg" title="Super-Fresh Snow &amp; Cool Arctic Gold"></a></li><li class="loaded"><a href="http://farm2.static.flickr.com/1679/25101537289_f7a916d4dc_b.jpg"><img src="http://farm2.static.flickr.com/1679/25101537289_f7a916d4dc_t.jpg" title="Kingfisher (Alcedo atthis)"></a></li>
+		</ul>
+	</div>
+</body>
+</html>

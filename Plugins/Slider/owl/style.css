@@ -1,0 +1,14 @@
+#slider{position:relative}
+#slider .owl-theme .owl-nav{margin:0}
+#slider .owl-carousel .owl-nav button.owl-prev{left:10px;opacity:0}
+#slider .owl-carousel .owl-nav button.owl-next{right:10px;opacity:0}
+#slider:hover .owl-carousel .owl-nav button.owl-prev,#slider:hover .owl-carousel .owl-nav button.owl-next{opacity:1}
+#slider .owl-dots{position:absolute;width:100%;bottom:10px;justify-content:center}
+#slider .container{position:relative}
+@media (min-width:768px){
+	#slider #search{margin:0;position:absolute;z-index:555;bottom:0}
+}
+#slider #search{width:100%;margin-top:2em;padding:1.5em 1.5em 1em 1.5em;background-color:rgba(0,0,0,.5)}
+#slider #search label{font-size:1.1em;font-weight:500;color:white;text-transform:uppercase;}
+#slider #search .form-control{}
+#slider #search button{color:black;background-color:white}

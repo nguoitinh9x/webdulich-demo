@@ -1,0 +1,16 @@
+#boxNews{position:relative;}
+#boxNews .items{position:relative;transition:all 0.3s;margin-bottom:1em;padding-bottom:1em;display:flex;border-bottom:1px solid #ececec;}
+#boxNews .items .img{position:relative;overflow:hidden;flex:1 40%;}
+#boxNews .items .img img{width:100%;height:auto;}
+#boxNews .items .img .date{position:absolute;top:0;left:0;z-index:9;display:inline-block;background-color:#ff000069;text-align:center;padding:5px;line-height:1.3;}
+#boxNews .items .img .date p{font-size:1.78em;color:white;display:block;margin-bottom:5px;border-bottom:1px solid white;}
+#boxNews .items .img .date span{font-size:.78em;color:white;display:block;}
+#boxNews .items .details{padding-left:1em;flex:1 60%;}
+#boxNews .items .details h3{font-size:1em;line-height:1.5;}
+#boxNews .items .details h3 a{color:white;font-weight:700;text-transform:capitalize;}
+#boxNews .items .details h3 a:hover{color:var(--color);}
+#boxNews .items .details p{color:white;}
+
+/* simply-scroll */
+#boxNews .vert1{width:100%;height:22em;padding:0;}
+#boxNews .vert1 .simply-scroll-clip{width:100%;height:100%;}

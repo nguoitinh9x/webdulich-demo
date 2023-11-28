@@ -1,0 +1,13 @@
+#boxGrid{position:relative;padding:2em 0}
+#boxGrid:after{content:'';width:100%;height:90px;background-color:white;position:absolute;bottom:0;left:0;right:0;z-index:2}
+#boxGrid .gridPhoto{display:grid;grid-gap:8px;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr 1fr;position:relative;z-index:3}
+#boxGrid .gridPhoto .items:nth-child(1){grid-column:1 /span 2;grid-row:1 /span 2}
+#boxGrid .gridPhoto .items:nth-child(2){grid-row:1 /span 2;}
+#boxGrid .gridPhoto .items{position:relative;overflow:hidden;transition:all 1s}
+#boxGrid .gridPhoto .items:hover{transform:translateY(-5px)}
+#boxGrid .gridPhoto .items img{width:100%;height:100%;transition:all 0.5s}
+#boxGrid .gridPhoto .items .caption{position:absolute;z-index:9;left:0;right:0;bottom:-5em;text-align:center;background-color:rgba(20,22,26,.5);opacity:0}
+#boxGrid .gridPhoto .items .caption h3{padding:1em 0;margin:0;font-size:1.21em;text-transform:uppercase;color:white}
+#boxGrid .gridPhoto .items .caption p{font-size:1.28em;color:white;margin:0}
+#boxGrid .gridPhoto .items .caption a:hover{color:var(--hcolor)}
+#boxGrid .gridPhoto .items:hover .caption{transition:all 0.5s;opacity:1;bottom:0}

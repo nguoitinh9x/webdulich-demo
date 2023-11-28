@@ -1,0 +1,10 @@
+.timkiem{max-width:100%;border-radius:0;align-items:center;flex-wrap:inherit;border:2px solid var(--color);}
+.timkiem .form-control{border:0;border-radius:0;background-color:transparent;outline:none;box-shadow:none;color:#ababab;font-size:.9em;}
+.timkiem .form-control:focus{box-shadow:none;}
+.timkiem .form-control::placeholder{font-size:1em;color:#ababab;font-weight:normal;}
+.timkiem select{border-right:1px solid #dcdcdc!important;color:black!important;font-size:1em!important;max-width:7em;}
+.timkiem button{font-weight:normal;border:0;border-radius:0;padding:.5em 1.5em;background-color:var(--color);color:white;}
+.timkiem button:hover{opacity:.7;}
+@media screen and (max-width:576px){
+	.timkiem{margin-bottom:1em;}
+}

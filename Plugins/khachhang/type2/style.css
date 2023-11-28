@@ -1,0 +1,24 @@
+#khachhang{width:100%;position:relative;padding:1em 0;}
+#khachhang .owl-item{padding:1em 5em;}
+#khachhang .owl-carousel .owl-nav button.owl-next,
+#khachhang .owl-carousel .owl-nav button.owl-prev{top:calc(50% - 63px);height:63px;width:63px;background:transparent;font-size:0;}
+#khachhang .cus{display:flex;align-items:center;}
+#khachhang .cus .img{flex:1 50%;border-radius:50%;box-shadow:0px 0px 1em var(--dark);border:1em solid #fff;}
+#khachhang .cus .img img{border-radius:50%;}
+#khachhang .cus .img img:hover{opacity:.7;}
+#khachhang .cus .details{flex:1 50%;}
+#khachhang .cus .details h2{font-size:2.4em;font-weight:700;color:#000;padding:0 3em .3em 0;}
+#khachhang .cus .details h3{padding:1em 0 .5em 0;border-top:2px solid var(--color);font-size:1.5em;font-weight:700;color:#000;}
+#khachhang .details .des{border-bottom:2px solid var(--color);padding:0 0 .5em 0;margin-bottom:1em;}
+#khachhang .cus .details p{font-size:1.2em;}
+@media screen and (max-width:992px){
+	#khachhang .owl-item{padding:1em;}
+	#khachhang .cus .details{flex:1 60%;}
+	#khachhang .cus .img{flex:1 40%;}
+	#khachhang .cus .details h2{padding:0 0 .3em 0;}
+}
+@media screen and (max-width:768px){
+	#khachhang .cus{flex-flow:wrap;display:inherit;}
+	#khachhang .cus .details{flex:1 100%;}
+	#khachhang .cus .img{flex:1 100%;max-width:280px;margin:2em auto 0;}
+}

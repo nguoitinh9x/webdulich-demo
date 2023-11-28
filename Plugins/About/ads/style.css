@@ -1,0 +1,3 @@
+#boxAds{position:relative;padding:2em 0}
+#boxAds img{width:100%;transition:all .5s}
+#boxAds img:hover{opacity:.8}

@@ -1,0 +1,32 @@
+#boxSearch .form-control {
+	border: 0;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: .375em 1em;
+}
+#boxSearch .form-search {
+	width: 14em;
+}
+#boxSearch .form-search .input-group-text {
+	background-color: white;
+	color:#7b7b7b;
+	border: 0;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: .375em 1em;
+}
+@media screen and (max-width:1200px) {
+	#boxSearch .form-search {
+		width: 12em;
+	}
+}
+@media screen and (max-width:992px) {
+	#boxSearch .form-search {
+		display: block;
+		width: 95%;
+		right: 0;
+		left: 0;
+		margin: auto;
+		top: 0;
+	}
+}

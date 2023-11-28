@@ -1,0 +1,6 @@
+#album{position:relative;background-size:cover;padding:2em 0;}
+#album .img{position:relative;display:flex;}
+#album .img:after{content:'';width:63px;height:63px;background:url(images/right.png) no-repeat;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;pointer-events:none;}
+#album .img .items{flex:1 50%;padding:1em .5em;}
+#album .img .items img{width:100%;box-shadow:0 0 10px #8e8e8e8e;border:8px solid white;}
+#album .img img:hover{opacity:.9;}

@@ -1,0 +1,13 @@
+#doitac{position:relative;padding:2em 0;}
+#doitac .title-doitac{color:var(--color);font-size:1.5em;font-weight:700;text-transform:uppercase;margin-bottom:1em;}
+#doitac .owl-item{padding:2px;}
+#doitac .li img{border:1px solid #c4c4c4;height:auto;-webkit-transition:transform 1s ease-in-out;-moz-transition:transform 1s ease-in-out;-o-transition:transform 1s ease-in-out;transition:transform 1s ease-in-out;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;}
+#doitac .li:hover img{-moz-transform:rotate3d(0,1,0,360deg);-webkit-transform:rotate3d(0,1,0,360deg);-ms-transform:rotate3d(0,1,0,360deg);transform:rotate3d(0,1,0,360deg);border:1px solid var(--color);}
+#doitac .owl-carousel .owl-nav button{background:transparent;color:var(--color);font-size:2em;}
+@media screen and (max-width:768px){
+	#doitac{padding:1em 0;}
+}
+@media (min-width:1200px){
+	#doitac .owl-carousel .owl-nav button.owl-prev{left:-45px;}
+	#doitac .owl-carousel .owl-nav button.owl-next{right:-45px;}
+}

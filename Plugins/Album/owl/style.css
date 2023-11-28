@@ -1,0 +1,6 @@
+.boxAlbum{position:relative;}
+.boxAlbum .items{transition:all 0.5s;}
+.boxAlbum .items:hover{transform:translateY(-5px);}
+.boxAlbum .items .img{overflow:hidden;position:relative;}
+.boxAlbum .items .details{width:100%;position:absolute;bottom:0;text-align:center;padding:.75em;}
+.boxAlbum .items .details h3{margin:0;color:white;text-transform:uppercase;font-size:1.28em;}

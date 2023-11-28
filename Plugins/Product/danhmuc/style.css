@@ -1,0 +1,7 @@
+.boxDm{position:relative;padding:2em 0;}
+.boxDm .title-style-2{font-size:1em;font-weight:700;text-transform:uppercase;color:var(--color);margin-bottom:1em;border-top:1px solid #ccc;padding-top:2em;}
+.boxDm .title-style-2:first-child{border-top:0;padding-top:0;}
+.boxDm .danhmuc{list-style:none;}
+.boxDm .danhmuc > li > a{color:black;font-weight:700;}
+.boxDm .danhmuc > li > ul > li > a{display:block;padding:.375em 0;color:black;font-size:.97em;font-weight:600;}
+.boxDm ul li a:hover,.boxDm ul li ul li a:hover{color:var(--color);}

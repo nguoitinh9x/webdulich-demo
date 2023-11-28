@@ -1,0 +1,29 @@
+﻿{
+  "jobs": [ "Doctor", "Teacher", "Engineer" ],
+  "days": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ],
+  "doctor_data": [ 570, 100, 21, 54, 260, 830, 710 ],
+  "teacher_data": [ 30, 182, 434, 791, 390, 30, 10 ],
+  "engineer_data": [ 1320, 1132, 601, 234, 120, 90, 20 ],
+  "doctor_style": {
+    "areaStyle": {
+      "opacity": 0.9,
+      "color": "#247BA0"
+    },
+    "lineStyle": { "opacity": 0 }
+  },
+  "teacher_style": {
+    "areaStyle": {
+      "opacity": 0.9,
+      "color": "#F25F5C"
+    },
+    "lineStyle": { "opacity": 0 }
+  },
+  "engineer_style": {
+    "areaStyle": {
+      "opacity": 0.9,
+      "color": "#FFE066"
+    },
+    "lineStyle": { "opacity": 0 }
+  }
+
+}

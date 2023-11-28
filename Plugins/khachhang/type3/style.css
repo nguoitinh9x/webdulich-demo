@@ -1,0 +1,24 @@
+#khachhang{padding:1em 0 3em 0;background-color:#f1f1f1;}
+#khachhang .customer .img{width:170px;height:auto;margin:auto;-webkit-transition:transform 1s ease-in-out;-moz-transition:transform 1s ease-in-out;-o-transition:transform 1s ease-in-out;transition:transform 1s ease-in-out;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;}
+#khachhang .customer:hover .img{-moz-transform:rotate3d(0,1,0,360deg);-webkit-transform:rotate3d(0,1,0,360deg);-ms-transform:rotate3d(0,1,0,360deg);transform:rotate3d(0,1,0,360deg);}
+#khachhang .customer .img img{transition:all 1.5s ease;}
+#khachhang .customer .details{text-align:center;}
+#khachhang .customer .details h3{margin:6em 0 1em 0;font-size:1.1em;text-transform:uppercase;color:black;font-family:var(--fonttitle);}
+#khachhang .customer .details h3:hover{color:var(--hcolor);}
+#khachhang .customer .details p{font-size:1em;color:black;}
+#khachhang .customer .hexagon{position:relative;width:170px;height:98.15px;margin:49.07px 0;background-size:auto 196.2991px;background-position:center;}
+#khachhang .customer .hexTop,.hexBottom{position:absolute;z-index:1;width:120.21px;height:120.21px;overflow:hidden;-webkit-transform:scaleY(0.5774) rotate(-45deg);-ms-transform:scaleY(0.5774) rotate(-45deg);transform:scaleY(0.5774) rotate(-45deg);background:inherit;left:24.90px;}
+#khachhang .customer .hexTop:after,.hexBottom:after{content:"";position:absolute;width:170.0000px;height:98.14954576223639px;-webkit-transform:rotate(45deg) scaleY(1.7321) translateY(-49.0748px);-ms-transform:rotate(45deg) scaleY(1.7321) translateY(-49.0748px);transform:rotate(45deg) scaleY(1.7321) translateY(-49.0748px);-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;background:inherit;}
+#khachhang .customer .hexTop{top:-60.1041px;}
+#khachhang .customer .hexTop:after{background-position:center top;}
+#khachhang .customer .hexBottom{bottom:-60.1041px;}
+#khachhang .customer .hexBottom:after{background-position:center bottom;}
+#khachhang .customer .hexagon:after{content:"";position:absolute;top:0.0000px;left:0;width:170.0000px;height:98.1495px;z-index:2;background:inherit;}
+
+#khachhang .owl-carousel .owl-nav button.owl-next,#khachhang .owl-carousel .owl-nav button.owl-prev{background:transparent;border-radius:50%;color:var(--fcolor);border:3px solid var(--fcolor);font-size:1.5em;}
+#khachhang .owl-theme .owl-dots .owl-dot span{width:30px;height:6px;border-radius:0;}
+#khachhang .owl-theme .owl-dots .owl-dot.active span,#khachhang .owl-theme .owl-dots .owl-dot:hover span{background:var(--fcolor);}
+@media screen and (min-width:1200px){
+	#khachhang .owl-carousel .owl-nav button.owl-next{right:-2em;}
+	#khachhang .owl-carousel .owl-nav button.owl-prev{left:-2em;}
+}

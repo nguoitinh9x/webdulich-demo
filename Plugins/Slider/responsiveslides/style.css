@@ -1,0 +1,11 @@
+.responsiveslides{position:relative;width:100%;border:1px solid #ccc;margin-bottom:1em}
+.responsiveslides .rslides{position:relative;overflow:hidden;width:100%}
+.responsiveslides .rslides li{position:absolute;display:none;width:100%;left:0;top:0}
+.responsiveslides .rslides li:first-child{position:relative;display:block}
+.responsiveslides .rslides img{display:block;height:auto;width:100%;border:0}
+.responsiveslides .rslides_tabs{width:100%;padding:4px;overflow:hidden;text-align:center}
+.responsiveslides .rslides_tabs li{display:inline-block;margin-right:1px;width:100px;border:1px solid #ccc}
+.responsiveslides .rslides_tabs li a{display:block}
+.responsiveslides .rslides_tabs li a img{width:100%}
+.responsiveslides a.prev{display:block;width:45%;height:512px;position:absolute;top:0;z-index:99}
+.responsiveslides a.next{display:block;width:45%;height:512px;position:absolute;top:0;right:0;z-index:99}

@@ -1,0 +1,4 @@
+.multimap{position: relative; width: 100%; float: left;}
+#locs{ position: absolute; top: 0px; left: 100px; z-index: 1000; }
+#locs p{ display: inline-block; padding: 10px 20px; cursor: pointer; margin-left: 20px; background: #8721A5; color: #fff; border-radius: 0px 0px 5px 5px; } 
+#map_bottom{  }

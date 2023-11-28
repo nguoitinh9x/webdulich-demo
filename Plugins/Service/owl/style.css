@@ -1,0 +1,10 @@
+#boxDv{width:100%;padding:2em 0;position:relative;background-size:cover;background-color:#f8f8f8}
+#boxDv .dichvu{text-align:center}
+#boxDv .dichvu .img{overflow:hidden;padding:1.7em;border:1px dashed #747474;max-width:270px;margin:auto;border-radius:50%;-webkit-transition:transform 1s ease-in-out;-moz-transition:transform 1s ease-in-out;-o-transition:transform 1s ease-in-out;transition:transform 1s ease-in-out;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
+#boxDv .dichvu .img img{width:100%;height:auto;border-radius:50%}
+#boxDv .dichvu:hover .img{border-color:var(--color);-moz-transform:rotate3d(0,1,0,360deg);-webkit-transform:rotate3d(0,1,0,360deg);-ms-transform:rotate3d(0,1,0,360deg);transform:rotate3d(0,1,0,360deg)}
+#boxDv .dichvu .details{margin:1.5em 0 0 0;font-size:1.14em}
+#boxDv .dichvu .details a{text-transform:uppercase;font-weight:700;color:#272727}
+#boxDv .dichvu .details a:hover{color:var(--hcolor)}
+#boxDv .owl-carousel .owl-nav button.owl-next{height:40px;width:21px;background:transparent url(images/next.png) no-repeat;font-size:0}
+#boxDv .owl-carousel .owl-nav button.owl-prev{height:40px;width:21px;background:transparent url(images/prev.png) no-repeat;font-size:0}

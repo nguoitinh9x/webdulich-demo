@@ -1,0 +1,32 @@
+RewriteEngine On
+RewriteRule ^admin$ admin/index.php [L]
+RewriteRule ^admin/$ admin/index.php [L]
+RewriteRule ^admin/([a-zA-Z0-9_-]+).html$ admin/index.php [L]
+RewriteRule ^admin/([a-zA-Z0-9_-]+).html&(.*)$ admin/index.php?$2 [L]
+RewriteRule ^admin/([a-zA-Z0-9_-]+).html?(.*)$ admin/index.php?$2 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)x([0-9]+)x([0-9]+)/(.*)\.(jpg|jpeg|png|gif|PNG|JPG|JPEG)$  image.php?w=$3&h=$4&q=100&zc=$5&type=&src=Upload/$2/$6.$7
+
+RewriteRule ^404$  index.php?com=404 [L]
+
+RewriteRule ^sitemap.xml$ Upload/sitemap.xml [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?com=$1 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/&page=([0-9]+)$ index.php?com=$1&page=$2 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?com=$1&id=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?com=$1&id=$2&page=$3 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/$ index.php?com=$1&idl=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/&page=([0-9]+)$ index.php?com=$1&idl=$2&page=$3 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?com=$1&idc=$3 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?com=$1&idc=$3&page=$4 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?com=$1&idi=$4 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?com=$1&idi=$4&page=$5 [L]
+
+#RewriteRule ^([a-zA-Z0-9_-]+)/&idl=(.*)&keywords=(.*)$ index.php?com=$1&idl=$2&keywords=$3 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/&keywords=(.*)$ index.php?com=$1&keywords=$2 [L]
+
+ 

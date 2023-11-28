@@ -1,0 +1,14 @@
+#nhantin{position:relative;padding:6em 0;background-size:cover}
+#nhantin .title-style-1 h2{text-transform:unset}
+#nhantin .bg-nhantin{position:relative;background-color:white;}
+#nhantin .contact-form-body .btn{background:var(--color) url(images/arrow-2.png) no-repeat 1em center;color:white;padding:.5em 1.5em .5em 2em;border-radius:2em;}
+#nhantin .contact-form-body .btn:hover{background-color:var(--hcolor)}
+#nhantin .videos{background-color:#f8f8f8}
+#nhantin .videos .mastervideo .img{position:relative}
+#nhantin .videos .btnplay a{font-size:5em}
+#nhantin .videos .btnplay{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+#nhantin .videos h3.title{text-align:center;font-size:1em;padding:1em;margin:0;text-transform:uppercase;font-weight:700;color:var(--color)}
+@media (min-width:992px){
+	#nhantin .bg-nhantin:before{content:'';width:161px;height:356px;background:url(images/letter.png) no-repeat;position:absolute;top:0;bottom:0;left:-110px;margin:auto;}
+	#nhantin .videos{margin-right:-10em}
+}

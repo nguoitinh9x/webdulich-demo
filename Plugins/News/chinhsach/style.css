@@ -1,0 +1,9 @@
+#boxCS{position:relative;padding:2em 0;background-color:#f8f8f8;}
+#boxCS .boxCS{display:flex;align-items:center;}
+#boxCS .boxCS .img{flex:1 30%;padding-right:1em;}
+#boxCS .boxCS .img img{border:1px solid var(--color);border-radius:50%;transition:all 1s;}
+#boxCS .boxCS .img:hover img{transform:rotateY(360deg);}
+#boxCS .boxCS .details{flex:1 70%;}
+#boxCS .boxCS .details h3{font-size:1.28em;line-height:1.5;margin:0;}
+#boxCS .boxCS .details h3 a{font-weight:700;color:#393939;text-transform:capitalize;}
+#boxCS .boxCS .details h3 a:hover{color:var(--color);}

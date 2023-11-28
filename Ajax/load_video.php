@@ -1,0 +1,1 @@
+<iframe width="300" height="120" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/<?=$_GET['id']?>?rel=1" allow="accelerometer; autoplay;" frameborder="0" allowfullscreen=""></iframe>

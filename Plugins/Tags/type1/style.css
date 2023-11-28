@@ -1,0 +1,6 @@
+.boxTags h6{margin-bottom:1em!important;}
+.boxTags h6:after{content:none!important;}
+.boxTags ul{display:block;position:relative;padding:0;margin:0 0 1em 0;list-style:none;}
+.boxTags ul > li{display:inline-block;}
+.boxTags ul > li > a{color:white;font-size:1em;padding:0;display:block;}
+.boxTags ul > li > a:hover{color:var(--tcolor);}

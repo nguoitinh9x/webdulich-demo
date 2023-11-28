@@ -1,0 +1,5 @@
+.videos{position:relative}
+.videos .mastervideo{position:relative}
+.videos .btnplay a{font-size:5em;color:white}
+.videos .btnplay{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.videos .owlvideos{margin-top:0.7em;position:relative}

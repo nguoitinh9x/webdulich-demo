@@ -1,0 +1,10 @@
+#ser_onl{position:fixed;bottom:0px;width:252px;right:5px;z-index:999;}
+#ser_onl b{margin-top:132px;float:right;font-size:19px;font-weight:bold;width:158px;height:30px;background:#006795;color:#FFF;padding-left:16px;border-radius:8px 8px 0px 0px;margin-right:145px;line-height:30px;}
+#ser_onl .label_serv_onl{text-align:right;cursor:pointer;font-size:15px;height:35px;width:249px;color:#fff;}
+.cont_serv_onl{display:none;cursor:pointer;color:#fff;font-weight:bold;}
+.cont_serv_onl .title{font-size:16px;color:#fff;margin-bottom:10px;}
+.cont_serv_onl.active{display:block;}
+.cont_serv_onl p{line-height:24px;font-size:14px;}
+@media screen and (max-width:768px){
+	#ser_onl{display:none;}
+}

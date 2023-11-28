@@ -1,0 +1,8 @@
+body{top:0!important;}
+.skiptranslate iframe{display:none!important;}
+.translate > a{padding:0!important;}
+.translate img:hover{opacity:.7;}
+@media screen and (max-width:992px) {
+	.translate {display: inline-block!important;}
+	.translate > a{padding:1em .75em!important;}
+}

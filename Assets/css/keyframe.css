@@ -1,0 +1,73 @@
+@keyframes balloon{
+	0%,100%{transform:translateY(0) rotate(-6deg)}
+	50%{transform:translateY(-1px) rotate(8deg)}
+}
+.bringing{animation:balloon 1s ease-in-out infinite}
+@-webkit-keyframes loader-1-outter{
+	0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+	100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}
+@keyframes loader-1-outter{
+	0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+	100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}
+@-webkit-keyframes loader-1-inner{
+	0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+	100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}
+}
+@keyframes loader-1-inner{
+	0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+	100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}
+}
+.blink_me { -webkit-animation-name: blinker; -webkit-animation-duration: 1s; -webkit-animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -moz-animation-name: blinker; -moz-animation-duration: 1s; -moz-animation-timing-function: linear; -moz-animation-iteration-count: infinite; animation-name: blinker; animation-duration: 1s; animation-timing-function: linear; animation-iteration-count: infinite; }
+@-moz-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@-webkit-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes bounceY{
+	from{transform:translateY(0px);}
+	to{transform:translateY(-25px);}
+}
+@-webkit-keyframes bounceY{
+	from{transform:translateY(0px);}
+	to{transform:translateY(-25px);}
+}
+@keyframes bounceX{
+	from{transform:translateX(0px);}
+	to{transform:translateX(-25px);}
+}
+@-webkit-keyframes bounceX{
+	from{transform:translateX(0px);}
+	to{transform:translateX(-25px);}
+}
+@keyframes animationmenus {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes circle{
+    0%{opacity:1;}
+    40%{opacity:1;}
+    100%{width:200%;height:200%;opacity:0;}
+}
+@keyframes circle{
+    0%{opacity:1;}
+    40%{opacity:1;}
+    100%{width:200%;height:200%;opacity:0;}
+}

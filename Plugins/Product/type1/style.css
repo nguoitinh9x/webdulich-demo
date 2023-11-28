@@ -1,0 +1,11 @@
+#boxProd{padding-bottom:2em;}
+#boxProd .owl-carousel .owl-nav button.owl-next{height:40px;width:21px;background:transparent url(images/next.png) no-repeat;font-size:0}
+#boxProd .owl-carousel .owl-nav button.owl-prev{height:40px;width:21px;background:transparent url(images/prev.png) no-repeat;font-size:0}
+#boxProd .items .list-img{position:relative;width:100%;overflow:hidden;margin-bottom:10px}
+#boxProd .items .list-img img{width:100%;}
+#boxProd .items .list-img .details{position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.5);color:white;padding:5em;text-align:center;outline:1px solid white;outline-offset:-3em;z-index:999;display:flex;flex-flow:wrap;align-content:center;transform:scale(0);opacity:0;transition:all .7s}
+#boxProd .items .list-img .details h3{flex:1 100%;text-transform:uppercase;}
+#boxProd .items .list-img .details p{flex:1 100%;}
+#boxProd .items .list-img .details.active{transform:scale(1);opacity:1}
+#boxProd .items .img{width:100%;transition:all 0.5s}
+#boxProd .items .img:hover{transform:translateY(-5px)}

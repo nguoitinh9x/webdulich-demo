@@ -1,0 +1,744 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Site Properities -->
+    <meta name="generator" content="Visual Studio 2015" />
+    <title>Chartli | Interactive Chart</title>
+    <meta name="description" content="Chartli Interactive Chart" />
+    <meta name="keywords" content="html5,chart,ui, library, framework, javascript,jquery,graphic,interactive" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/demo.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Chartli Interacive Chart
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="line.html">Line</a>
+                </li>
+                <li>
+                    <a href="bar.html">Bar</a>
+                </li>
+                <li>
+                    <a href="spray.html">Spraying</a>
+                </li>
+                <li>
+                    <a href="wax.html">Wax Stick</a>
+                </li>
+                <li>
+                    <a href="pie.html">Pie</a>
+                </li>
+                <li>
+                    <a href="radar.html">Radar</a>
+                </li>
+            
+                <li>
+                    <a href="fd.html">Forcing-Directing</a>
+                </li>
+                <li>
+                    <a href="map.html">Mapping</a>
+                </li>
+                <li>
+                    <a href="gauged.html">Gauged</a>
+                </li>
+                <li>
+                    <a href="cone.html">Cone</a>
+                </li>
+                <li>
+                    <a href="special.html">Special</a>
+                </li>
+                <li>
+                    <a href="documentation.html">Documentation</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Line Chart Example (with Json Data)</h3>
+                            <div id="chartli1" style="height:600px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Map Example</h3>
+                            <div id="chartli4" style="width: 100%;height:760px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card card-block">
+                            <h3 class="card-title">Radar Chart Example</h3>
+                            <div id="chartli5" style="height:600px;"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card card-block">
+                            <h3 class="card-title">Bar Chart Example</h3>
+                            <div id="chartli6" style="height:600px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli2" style="height:400px;"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli3" style="height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/chartli.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(this).bind("contextmenu", function (e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+    <script>
+        $.ajax({
+            type: "GET",
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            url: 'data/chartliline2.json',
+            error: function () {
+                alert("An error occurred.");
+            },
+            success: function (data) {
+                //alert(data.male)
+                var chartliexample1 = echarts.init(document.getElementById('chartli1'));
+                window.onresize = chartliexample1.resize;
+                chartliexample1.setOption({
+                    title: {
+                        text: '',
+                        subtext: ''
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data: data.jobs
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: { show: false },
+                            dataView: { show: false, readOnly: false },
+                            magicType: { show: true, type: ['stack', 'tiled'], title: 'Change' },
+                            restore: { show: true, title: 'Refresh' },
+                            saveAsImage: { show: true, title: 'Save As Image' }
+                        }
+                    },
+
+                    calculable: true,
+                    xAxis: [
+                        {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: data.days
+                        },
+
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value'
+                        }
+                    ],
+                    grid: {
+                        left: '0',
+                        right: '1%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    series: [
+                        {
+                            name: 'Doctor',
+                            type: 'line',
+                            smooth: true,
+                            itemStyle: { normal: data.doctor_style},
+                            data: data.doctor_data,
+                            showSymbol:false
+                        },
+                        {
+                            name: 'Teacher',
+                            type: 'line',
+                            smooth: true,
+                            itemStyle: { normal:  data.teacher_style},
+                            data: data.teacher_data,
+                            showSymbol: false
+
+                        },
+                        {
+                            name: 'Engineer',
+                            type: 'line',
+                            smooth: true,
+                            itemStyle: { normal:data.engineer_style},
+                            data: data.engineer_data,
+                            showSymbol: false
+
+                        }
+                    ]
+                });
+            }
+        });
+        
+       
+    </script>
+    <script type="text/javascript">
+
+        var chartliexample2 = echarts.init(document.getElementById('chartli2'));
+
+        option1 = {
+            tooltip: {
+                formatter: "{a} <br/>{b} : {c}%"
+            },
+            toolbox: {
+                feature: {
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            series: [
+                {
+                    name: 'Speed',
+                    type: 'gauge',
+                    detail: { formatter: '{value}%' },
+                    data: [{ value: 50, name: 'Km/h' }],
+                    markArea: {
+                        itemStyle:{
+                            normal: {
+                                color: 'red'
+                            }
+                        }
+                       
+                    }
+                },
+            ]
+        };
+
+        timeTicket = setInterval(function () {
+            option1.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
+            chartliexample2.setOption(option1, true);
+        }, 2000);
+
+
+        chartliexample2.setOption(option1);
+    </script>
+    <script>
+        var chartliexample3 = echarts.init(document.getElementById('chartli3'));
+        option = {
+            title: {
+                text: '',
+                subtext: '',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br />{b} : {c} ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                y: 'bottom',
+                data: ['Mercedes', 'BMW', 'Audi', 'Volvo', 'Subaru', 'Ford', 'Reanult', 'Toyota']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    magicType: {
+                        show: true,
+                        type: ['pie', 'funnel']
+                    },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            color: ['#EAC435', '#345995', '#E40066', '#03CEA4', '#FB4D3D', '#403F4C', '#FA7921', '#1B998B'],
+            calculable: true,
+            series: [
+                {
+                    name: 'Radius Mode',
+                    type: 'pie',
+                    radius: [20, 110],
+                    center: ['25%', 200],
+                    roseType: 'radius',
+                    width: '40%',       // for funnel
+                    max: 40,            // for funnel
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        },
+                        emphasis: {
+                            label: {
+                                show: true
+                            },
+                            labelLine: {
+                                show: true
+                            }
+                        }
+                    },
+                    data: [
+                        { value: 10, name: 'Mercedes' },
+                        { value: 5, name: 'BMW' },
+                        { value: 15, name: 'Audi' },
+                        { value: 25, name: 'Volvo' },
+                        { value: 20, name: 'Subaru' },
+                        { value: 35, name: 'Ford' },
+                        { value: 30, name: 'Reanult' },
+                        { value: 40, name: 'Toyota' }
+                    ]
+                },
+                {
+                    name: 'Area Mode',
+                    type: 'pie',
+                    radius: [30, 110],
+                    center: ['75%', 200],
+                    roseType: 'area',
+                    x: '50%',               // for funnel
+                    max: 40,                // for funnel
+                    sort: 'ascending',     // for funnel
+                    data: [
+                        { value: 10, name: 'Mercedes' },
+                        { value: 5, name: 'BMW' },
+                        { value: 15, name: 'Audi' },
+                        { value: 25, name: 'Volvo' },
+                        { value: 20, name: 'Subaru' },
+                        { value: 35, name: 'Ford' },
+                        { value: 30, name: 'Reanult' },
+                        { value: 40, name: 'Toyota' }
+                    ]
+                }
+            ]
+        };
+        chartliexample3.setOption(option);
+    </script>
+
+    <script>
+
+        var myChart2 = echarts.init(document.getElementById('chartli4'));
+
+        myChart2.showLoading();
+
+        $.get('maps/world.json', function (geoJson) {
+
+            myChart2.hideLoading();
+
+            echarts.registerMap('world', geoJson);
+
+            myChart2.setOption(option = {
+                title: {
+                    text: '',
+                    subtext: 'Datas Are Not Real',
+
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{b}<br />{c}'
+                },
+                backgroundColor: '#2c343c',
+                toolbox: {
+                    show: true,
+                    orient: 'horizontal',
+                    right: 'left',
+                    top: 'top',
+                    feature: {
+                        dataView: { show: false },
+                        restore: { title: 'Yenile' },
+                        saveAsImage: { title: 'İndir' }
+                    }
+                },
+                visualMap: {
+                    min: 0,
+                    max: 100000,
+                    text: ['Maksimum', 'En Düşük'],
+                    realtime: false,
+                    calculable: true,
+                    color: ['#F25F5C', '#FFE066', '#247BA0']
+                },
+                series: [
+                    {
+                        name: 'World',
+                        type: 'map',
+                        mapType: 'world',
+                        itemStyle: {
+                            normal: { label: { show: false } },
+                            emphasis: { label: { show: false } }
+                        },
+                       data: [
+                            { name: 'Afghanistan', value: 28397.812 },
+                            { name: 'Angola', value: 19549.124 },
+                            { name: 'Albania', value: 3150.143 },
+                            { name: 'United Arab Emirates', value: 8441.537 },
+                            { name: 'Argentina', value: 40374.224 },
+                            { name: 'Armenia', value: 2963.496 },
+                            { name: 'French Southern and Antarctic Lands', value: 268.065 },
+                            { name: 'Australia', value: 22404.488 },
+                            { name: 'Austria', value: 8401.924 },
+                            { name: 'Azerbaijan', value: 9094.718 },
+                            { name: 'Burundi', value: 9232.753 },
+                            { name: 'Belgium', value: 10941.288 },
+                            { name: 'Benin', value: 9509.798 },
+                            { name: 'Burkina Faso', value: 15540.284 },
+                            { name: 'Bangladesh', value: 151125.475 },
+                            { name: 'Bulgaria', value: 7389.175 },
+                            { name: 'The Bahamas', value: 66402.316 },
+                            { name: 'Bosnia and Herzegovina', value: 3845.929 },
+                            { name: 'Belarus', value: 9491.07 },
+                            { name: 'Belize', value: 308.595 },
+                            { name: 'Bermuda', value: 64.951 },
+                            { name: 'Bolivia', value: 716.939 },
+                            { name: 'Brazil', value: 195210.154 },
+                            { name: 'Brunei', value: 27.223 },
+                            { name: 'Bhutan', value: 716.939 },
+                            { name: 'Botswana', value: 1969.341 },
+                            { name: 'Central African Republic', value: 4349.921 },
+                            { name: 'Canada', value: 34126.24 },
+                            { name: 'Switzerland', value: 7830.534 },
+                            { name: 'Chile', value: 17150.76 },
+                            { name: 'China', value: 1359821.465 },
+                            { name: 'Ivory Coast', value: 60508.978 },
+                            { name: 'Cameroon', value: 20624.343 },
+                            { name: 'Democratic Republic of the Congo', value: 62191.161 },
+                            { name: 'Republic of the Congo', value: 3573.024 },
+                            { name: 'Colombia', value: 46444.798 },
+                            { name: 'Costa Rica', value: 4669.685 },
+                            { name: 'Cuba', value: 11281.768 },
+                            { name: 'Northern Cyprus', value: 1.468 },
+                            { name: 'Cyprus', value: 1103.685 },
+                            { name: 'Czech Republic', value: 10553.701 },
+                            { name: 'Germany', value: 83017.404 },
+                            { name: 'Djibouti', value: 834.036 },
+                            { name: 'Denmark', value: 5550.959 },
+                            { name: 'Dominican Republic', value: 10016.797 },
+                            { name: 'Algeria', value: 37062.82 },
+                            { name: 'Ecuador', value: 15001.072 },
+                            { name: 'Egypt', value: 78075.705 },
+                            { name: 'Eritrea', value: 5741.159 },
+                            { name: 'Spain', value: 46182.038 },
+                            { name: 'Estonia', value: 1298.533 },
+                            { name: 'Ethiopia', value: 87095.281 },
+                            { name: 'Finland', value: 5367.693 },
+                            { name: 'Fiji', value: 860.559 },
+                            { name: 'Falkland Islands', value: 49.581 },
+                            { name: 'France', value: 63230.866 },
+                            { name: 'Gabon', value: 1556.222 },
+                            { name: 'United Kingdom', value: 62066.35 },
+                            { name: 'Georgia', value: 4388.674 },
+                            { name: 'Ghana', value: 24262.901 },
+                            { name: 'Guinea', value: 10876.033 },
+                            { name: 'Gambia', value: 1680.64 },
+                            { name: 'Guinea Bissau', value: 10876.033 },
+                            { name: 'Equatorial Guinea', value: 696.167 },
+                            { name: 'Greece', value: 11109.999 },
+                            { name: 'Greenland', value: 56.546 },
+                            { name: 'Guatemala', value: 14341.576 },
+                            { name: 'French Guiana', value: 231.169 },
+                            { name: 'Guyana', value: 786.126 },
+                            { name: 'Honduras', value: 7621.204 },
+                            { name: 'Croatia', value: 4338.027 },
+                            { name: 'Haiti', value: 9896.4 },
+                            { name: 'Hungary', value: 10014.633 },
+                            { name: 'Indonesia', value: 240676.485 },
+                            { name: 'India', value: 1205624.648 },
+                            { name: 'Ireland', value: 4467.561 },
+                            { name: 'Iran', value: 240676.485 },
+                            { name: 'Iraq', value: 30962.38 },
+                            { name: 'Iceland', value: 318.042 },
+                            { name: 'Israel', value: 7420.368 },
+                            { name: 'Italy', value: 60508.978 },
+                            { name: 'Jamaica', value: 2741.485 },
+                            { name: 'Jordan', value: 6454.554 },
+                            { name: 'Japan', value: 127352.833 },
+                            { name: 'Kazakhstan', value: 15921.127 },
+                            { name: 'Kenya', value: 40909.194 },
+                            { name: 'Kyrgyzstan', value: 5334.223 },
+                            { name: 'Cambodia', value: 14364.931 },
+                            { name: 'South Korea', value: 51452.352 },
+                            { name: 'Kosovo', value: 97.743 },
+                            { name: 'Kuwait', value: 2991.58 },
+                            { name: 'Laos', value: 6395.713 },
+                            { name: 'Lebanon', value: 4341.092 },
+                            { name: 'Liberia', value: 3957.99 },
+                            { name: 'Libya', value: 6040.612 },
+                            { name: 'Sri Lanka', value: 20758.779 },
+                            { name: 'Lesotho', value: 2008.921 },
+                            { name: 'Lithuania', value: 3068.457 },
+                            { name: 'Luxembourg', value: 507.885 },
+                            { name: 'Latvia', value: 2090.519 },
+                            { name: 'Morocco', value: 31642.36 },
+                            { name: 'Moldova', value: 103.619 },
+                            { name: 'Madagascar', value: 21079.532 },
+                            { name: 'Mexico', value: 117886.404 },
+                            { name: 'Macedonia', value: 507.885 },
+                            { name: 'Mali', value: 13985.961 },
+                            { name: 'Myanmar', value: 51931.231 },
+                            { name: 'Montenegro', value: 620.078 },
+                            { name: 'Mongolia', value: 2712.738 },
+                            { name: 'Mozambique', value: 23967.265 },
+                            { name: 'Mauritania', value: 3609.42 },
+                            { name: 'Malawi', value: 15013.694 },
+                            { name: 'Samoa', value: 9509.798 },
+                            { name: 'Cape Verde', value: 9509.798 },
+                            { name: 'Republic of Congo', value: 9509.798 },
+                            { name: 'Taiwan', value: 9509.798 },
+                            { name: 'Malaysia', value: 28275.835 },
+                            { name: 'Namibia', value: 2178.967 },
+                            { name: 'New Caledonia', value: 246.379 },
+                            { name: 'Niger', value: 15893.746 },
+                            { name: 'Nigeria', value: 159707.78 },
+                            { name: 'Nicaragua', value: 5822.209 },
+                            { name: 'Netherlands', value: 16615.243 },
+                            { name: 'Norway', value: 4891.251 },
+                            { name: 'Nepal', value: 26846.016 },
+                            { name: 'New Zealand', value: 4368.136 },
+                            { name: 'Oman', value: 2802.768 },
+                            { name: 'Pakistan', value: 173149.306 },
+                            { name: 'Panama', value: 3678.128 },
+                            { name: 'Peru', value: 29262.83 },
+                            { name: 'Philippines', value: 93444.322 },
+                            { name: 'Papua New Guinea', value: 6858.945 },
+                            { name: 'Poland', value: 38198.754 },
+                            { name: 'Puerto Rico', value: 3709.671 },
+                            { name: 'North Korea', value: 1.468 },
+                            { name: 'Portugal', value: 10589.792 },
+                            { name: 'Paraguay', value: 6459.721 },
+                            { name: 'Qatar', value: 1749.713 },
+                            { name: 'Romania', value: 21861.476 },
+                            { name: 'Russia', value: 21861.476 },
+                            { name: 'Rwanda', value: 10836.732 },
+                            { name: 'Western Sahara', value: 514.648 },
+                            { name: 'Saudi Arabia', value: 27258.387 },
+                            { name: 'Sudan', value: 35652.002 },
+                            { name: 'South Sudan', value: 9940.929 },
+                            { name: 'Senegal', value: 12950.564 },
+                            { name: 'Solomon Islands', value: 526.447 },
+                            { name: 'Sierra Leone', value: 5751.976 },
+                            { name: 'El Salvador', value: 6218.195 },
+                            { name: 'Somaliland', value: 9636.173 },
+                            { name: 'Somalia', value: 9636.173 },
+                            { name: 'Republic of Serbia', value: 3573.024 },
+                            { name: 'Suriname', value: 524.96 },
+                            { name: 'Slovakia', value: 5433.437 },
+                            { name: 'Slovenia', value: 2054.232 },
+                            { name: 'Sweden', value: 9382.297 },
+                            { name: 'Swaziland', value: 1193.148 },
+                            { name: 'Syria', value: 7830.534 },
+                            { name: 'Chad', value: 11720.781 },
+                            { name: 'Togo', value: 6306.014 },
+                            { name: 'Thailand', value: 66402.316 },
+                            { name: 'Tajikistan', value: 7627.326 },
+                            { name: 'Turkmenistan', value: 5041.995 },
+                            { name: 'East Timor', value: 10016.797 },
+                            { name: 'Trinidad and Tobago', value: 1328.095 },
+                            { name: 'Tunisia', value: 10631.83 },
+                            { name: 'Turkey', value: 72137.546 },
+                            { name: 'United Republic of Tanzania', value: 44973.33 },
+                            { name: 'Uganda', value: 33987.213 },
+                            { name: 'Ukraine', value: 46050.22 },
+                            { name: 'Uruguay', value: 3371.982 },
+                            { name: 'United States of America', value: 312247.116 },
+                            { name: 'Uzbekistan', value: 27769.27 },
+                            { name: 'Venezuela', value: 236.299 },
+                            { name: 'Vietnam', value: 89047.397 },
+                            { name: 'Vanuatu', value: 236.299 },
+                            { name: 'West Bank', value: 13.565 },
+                            { name: 'Yemen', value: 22763.008 },
+                            { name: 'South Africa', value: 51452.352 },
+                            { name: 'Zambia', value: 13216.985 },
+                            { name: 'Zimbabwe', value: 13076.978 }
+                        ],
+
+                    }
+                ]
+            });
+        });
+
+    </script>
+
+    <script>
+
+        var chartliexample5 = echarts.init(document.getElementById('chartli5'));
+
+        option = {
+            title: {
+                text: '',
+                subtext: ''
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'right',
+                y: 'bottom',
+                data: ['Messi', 'Ronaldo','Ibrahimovic']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+
+                    restore: { show: true, title: 'Refresh' },
+                    saveAsImage: { show: true, title: 'Save As Image' }
+                }
+            },
+            color: ['#F25F5C', '#FFE066', '#247BA0'],
+            backgroundColor: '#2c343c',
+            polar: [
+               {
+                   indicator: [
+                       { text: 'Skill', max: 6000 },
+                       { text: 'Defend', max: 16000 },
+                       { text: 'Speed', max: 30000 },
+                       { text: 'Attack', max: 38000 },
+                       { text: 'Power', max: 52000 },
+                       { text: 'Fitness', max: 25000 }
+                   ]
+               }
+            ],
+            calculable: true,
+            series: [
+                {
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                type: 'dark',
+                            }
+                        }
+                    },
+                    name: 'Budget vs Spending',
+                    type: 'radar',
+                    data: [
+                        {
+                            value: [5800, 10000, 30000, 37000, 50000, 23000],
+                            name: 'Messi'
+                        },
+                         {
+                             value: [5500, 10000, 28000, 36500, 42000, 25000],
+                             name: 'Ronaldo'
+                         }
+                         ,
+                         {
+                             value: [5300, 10000, 25000, 37500, 45000, 21000],
+                             name: 'Ibrahimovic'
+                         }
+                    ]
+                }
+            ]
+        };
+
+        chartliexample5.setOption(option);
+    </script>
+    <script>
+
+        var chartliexample6 = echarts.init(document.getElementById('chartli6'));
+
+        var xAxisData = [];
+        var data1 = [];
+        var data2 = [];
+        for (var i = 0; i < 100; i++) {
+            xAxisData.push('Day ' + i);
+            data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
+            data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
+        }
+
+        option = {
+            title: {
+                text: 'Animation Delay'
+            },
+            legend: {
+                data: ['Red Meat', 'White Meat'],
+                align: 'left'
+            },
+            toolbox: {
+                // y: 'bottom',
+                feature: {
+                    magicType: {
+                        type: ['stack', 'tiled']
+                    },
+                    dataView: {},
+                    saveAsImage: {
+                        pixelRatio: 2
+                    }
+                }
+            },
+            color: ['#FB4D3D', '#EAC435'],
+            tooltip: {},
+            xAxis: {
+                data: xAxisData,
+                silent: false,
+                splitLine: {
+                    show: false
+                }
+            },
+            yAxis: {
+            },
+            series: [{
+                name: 'Red Meat',
+                type: 'bar',
+                data: data1,
+                animationDelay: function (idx) {
+                    return idx * 10;
+                }
+            }, {
+                name: 'White Meat',
+                type: 'bar',
+                data: data2,
+                animationDelay: function (idx) {
+                    return idx * 10 + 100;
+                }
+            }],
+            animationEasing: 'elasticOut',
+            animationDelayUpdate: function (idx) {
+                return idx * 5;
+            }
+        };
+
+        chartliexample6.setOption(option);
+    </script>
+</body>
+</html>

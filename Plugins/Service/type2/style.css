@@ -1,0 +1,8 @@
+#boxtuvan{position:relative;padding:1em 0;}
+#boxtuvan .title-style-1{padding-bottom:2em;}
+#boxtuvan .tuvan{position:relative;margin-bottom:2em;text-align:center;border:1px solid #d7d7d7;padding-bottom:2em;}
+#boxtuvan .tuvan h3{padding:1em;background-color:var(--color);font-size:1.07em;color:white;text-transform:uppercase;}
+#boxtuvan .tuvan .des{padding:1em 2em;}
+#boxtuvan .tuvan .des p{font-size:1.07em;color:#333333;line-height:1.8;}
+#boxtuvan .tuvan .btn{font-size:1.07em;margin:0;background-color:var(--color);padding:.7em 2em;border-radius:2em;line-height:1.5;text-align:center;color:white;}
+#boxtuvan .tuvan .btn:hover{background-color:var(--hcolor);}
